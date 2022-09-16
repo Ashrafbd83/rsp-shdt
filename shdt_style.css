@@ -2,10 +2,10 @@ nav {
     background: var(--black);
     width: 100%;
     height: 5rem;
-    position: fixed;
+    position: sticky;
     top: 0;
-    z-index: 99;
-
+    z-index: 9999;
+    display: block;
 }
 
 .nav_menu {
@@ -35,7 +35,7 @@ nav {
 .menu_item {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1.4vw;
 }
 
 .menu_item a:hover {
@@ -57,39 +57,199 @@ nav button {
 
 /* header area */
 header {
+    position: relative;
     background: var(--black);
-    width: 100%;
-    height: 100vh;
+
 }
 
 .header_container {
-    height: 100%;
-    width: 100%;
     display: flex;
-    flex-direction: row;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+
 }
 
 .header_left {
-    width: 45%;
-    height: 100%;
-    flex-wrap: wrap;
+    flex: 1;
+}
+
+.header_left_img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.header_left_img img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .header_right {
-    height:100vh;
-    width: 55%;
-    background-color: aquamarine;
-    position:relative;
+    flex: 1;
 }
-
-.header_right_text {
-    position:absolute;
-    display: flex;
-    flex-direction: column;
-    background-color: blue;
-    height:100vh;
-    width: 55%;}
 
 .header_right_text .text1 {
     color: white;
+    font-size: 2rem;
+}
+
+.header_right_text .text2 {
+    font-size: 6vw;
+}
+
+.text3 {
+
+    font-size: 1.3rem;
+}
+
+.text3 span {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    background-color: var(--bg);
+    width: 100%;
+    height: 5rem;
+    bottom: 0px;
+    margin-bottom: -3.1rem;
+    z-index: 99;
+    transform: skewY(-2deg);
+    transform-origin: left;
+    overflow-y: hidden;
+}
+
+
+/* About Me */
+
+.about_section {
+    text-align: center;
+    position: relative;
+}
+
+.about_section .about_img {
+    max-width: 12.5rem;
+    max-height: 12.5rem;
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 2rem;
+    position: relative;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.about_me {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-items: center;
+    position: relative;
+}
+
+.about_text {
+    max-width: 70%;
+    text-align: left;
+    padding-bottom: 2.5rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+}
+
+.about_text p span {
+    color: var(--primary);
+}
+
+.about_section h1 {
+    color: var(--primary);
+    position: relative;
+}
+
+.about_text a {
+    margin-top: 1.5rem;
+}
+
+
+/* my Service */
+.service_container {
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    gap: 3vw;
+    padding: 2rem;
+}
+
+.cards .card {
+    margin: 0 1.5rem;
+    background-color: var(--primary);
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+
+.cards .card::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--normal);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
+    transition: all .5s;
+}
+
+.cards .card:hover::after {
+    transform: rotate(13deg)
+}
+
+.cards .card:hover .sbox {
+    color: var(--normal);
+    background: var(--black);
+}
+
+.card .sbox {
+    font-size: 2rem;
+    color: var(--black);
+    border: 0.1rem solid var(--black);
+    display: inline;
+    padding: .8rem;
+    border-radius: 50%;
+}
+
+.card h2 {
+    font-size: 1rem;
+    color: var(--black);
+    margin-top: .5rem;
+}
+
+.card p {
+    font-size: 1.0rem;
+    color: var(--black);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card a {
+    font-size: 1.1rem;
+    color: var(--normal);
+    border: 0.1rem solid var(--black);
+    border-radius: 2rem;
+    background-color: var(--black);
+    padding: .2rem .8rem;
+    font-weight: 700;
+}
+
+.card a:hover {
+    color: var(--black);
+    background-color: var(--normal);
 }

@@ -49,12 +49,11 @@
 body {
     line-height: 1.7;
     color: var(--normal);
-    /* background-color: var(--bg); */
+    background-color: var(--bg);
 }
 
 .container {
-    width: var(--container-width-lg);
-    margin: 0 auto;
+    margin: 0 5rem;
 }
 
 section {
@@ -98,3 +97,31 @@ img {
     display: block;
     object-fit: cover;
 }
+
+.btn {
+    display: inline-block;
+    padding: 0.6rem 2rem;
+    background: var(--primary);
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    color: var(--black);
+    font-weight: 500;
+    font-size: 1.0rem;;
+}
+
+.btn:hover {
+    background: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.border_bottom{
+    color: var(--primary);
+    display: inline;
+    border-bottom: 2px solid var(--primary);
+    color:var(--primary);
+    margin-bottom:2.5rem;
+    text-align: center;
+}
+
