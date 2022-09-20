@@ -3,3 +3,23 @@
         width:var(--container-width-md);
     }
 }
+@media screen and (max-width:992px){
+    .container{
+        width:var(--container-width-md);
+    }
+    .service_container .cards {
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+    }
+    
+}
+@media screen and (max-width:786px){
+    .container{
+        width:var(--container-width-md);
+    }
+    .service_container .cards {
+        grid-template-columns: 1fr;
+        justify-content: space-around;
+    }
+    
+}

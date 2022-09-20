@@ -218,12 +218,17 @@ header::before {
 }
 
 .card .sbox {
-    font-size: 2rem;
     color: var(--black);
+    height: 4.0rem;
+    width: 4.0rem;
     border: 0.1rem solid var(--black);
-    display: inline;
-    padding: .8rem;
     border-radius: 50%;
+    margin: 0 auto;
+}
+
+.card .sbox i {
+    font-size: 2.5rem;
+    padding:.5rem;
 }
 
 .card h2 {
@@ -252,4 +257,20 @@ header::before {
 .card a:hover {
     color: var(--black);
     background-color: var(--normal);
+}
+
+/* Progress Bar */
+
+.skill {
+    text-align: center;
+}
+
+.progress-line span {
+    height: 100%;
+    position: absolute;
+    border-radius: .7rem;
+    transform-origin: left;
+    transform: scaleX(0);
+    background-color: var(--primary);
+
 }
